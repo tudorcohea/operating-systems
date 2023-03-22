@@ -14,6 +14,31 @@ static void do_write(const char *msg, void *address, int value)
 	* (int *) address = value;
 }
 
+/*
+	cum avem acces la un array de int-uri 
+
+	((int *)arr)[10]
+	(*(int *)arr + 10)
+	*(int *)(arr + sizeof(int) * 10)
+*/
+
+/*
+	char *f = malloc(100 * sizeof(int))
+	char *f = malloc(100 * sizeof(*f))
+	-> mai buna asta a doua pentru ca daca schimb
+	tipul de date nu mai trebuie schimbat si in parateza 
+
+*/
+
+/*
+
+	int **matrix, n, m;
+	matrix = malloc(n * sizeof(*matrix));
+	for (int i = 0; i < ; i++) {
+		matrix[i] = malloc(m * sizeof(**matrix));
+	}
+
+*/
 static void do_read(const char *msg, void *address)
 {
 	int p;

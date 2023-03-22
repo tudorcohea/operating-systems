@@ -10,7 +10,9 @@ int main(void )
 	char *p = "LeString";
 	char *const cp = "ConstLeString";
 	const char *const cp2 = "LeConstString";
-
+	// p[0] = 'X'; nu merge pentru ca sunt alocate in rodata
+	// si nu mi se permite accesul
+	// const int a; -> merge in ro_data
 	int arr[20];
 	char c_arr[20];
 
